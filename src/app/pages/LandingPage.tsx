@@ -37,7 +37,7 @@ function useScrollInView(threshold = 0.15) {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, {
     once: true,
-    margin: `-${(1 - threshold) * 100}px 0px`,
+    margin: `${-(1 - threshold) * 100}px 0px`,
   });
   return { ref, isInView };
 }
